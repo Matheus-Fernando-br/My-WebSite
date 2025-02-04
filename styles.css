@@ -1,0 +1,688 @@
+/* Definição de variáveis globais */
+:root {
+  --cor-backgroung: black;
+  --cor-fundo: #5c5c5c;
+  --cor-fundo-sec: #afacacb0;
+  --cor-fundo-esc: #5a5858d9;
+  --cor-prim: #ffffff;
+  --cor-sec: #ce0000ee;
+  --cor-brilho: #e64242bb;
+  --cor-op: #00eeff;
+}
+
+/* ESTILO GERAL */
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 250px; /* Ajuste este valor para a altura do cabeçalho */
+}
+
+* {
+  margin: 0;
+  padding: 0 0;
+  box-sizing: border-box;
+  color: inherit;
+}
+
+body {
+  background: var(--cor-backgroung);
+  color: var(--cor-prim);
+  height: 500px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  margin-top: 250px;
+}
+
+.interface {
+  max-width: 400vh;
+  margin: 0 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.btn-contato button {
+  padding: 25px 50px;
+  font-size: 40px;
+  font-weight: 20px;
+  background-color: var(--cor-sec);
+  color: var(--cor-fundo-sec);
+  border: 0;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  transition: 0.3s;
+}
+
+button:hover,
+form .btn-enviar input:hover {
+  box-shadow: 0vh 0vh 40px var(--cor-brilho);
+  transform: scale(1.03);
+  color: var(--cor-prim);
+  cursor: pointer;
+}
+
+.titulo {
+  color: var(--cor-prim);
+  font-size: 60px;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.titulo span {
+  color: var(--cor-sec);
+}
+
+/* ESTILO DO CABEÇALHO */
+
+header img {
+  width: 400px;
+  height: 280px;
+  transition: 0.4s;
+}
+
+header img:hover {
+  transform: scale(1.15);
+}
+
+header {
+  padding: 10px 5%;
+  position: fixed; /* Fixa o cabeçalho no topo */
+  top: 0; /* Posiciona no topo */
+  left: 0; /* Alinha à esquerda */
+  width: 100%; /* Faz o cabeçalho ocupar toda a largura */
+  z-index: 1000; /* Garante que fique acima de outros elementos */
+  background-color: var(--cor-backgroung); /* Cor de fundo (opcional) */
+  box-shadow: 0px 4px 6px var(--cor-fundo); /* Adiciona uma sombra (opcional) */
+}
+
+header > .interface {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+header .logo {
+  flex: 0 1 auto;
+}
+
+header .menu-desktop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+header .menu-desktop a {
+  color: var(--cor-fundo);
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.2s;
+  font-size: 35px;
+  margin: 0 50px;
+}
+
+header nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul li {
+  display: inline-block;
+  padding: 0 60px;
+}
+
+header nav ul li a:hover {
+  color: var(--cor-prim);
+  transform: scale(1.1);
+}
+
+header .btn-contato {
+  display: flex;
+  justify-content: flex-end;
+  flex: 0 1 auto;
+}
+
+/* ESTILO TOPO DO SITE */
+section .txt-topo-site {
+  padding: 250px 7%;
+}
+
+section .topo-do-site .flex {
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+section .txt-topo-site h1 {
+  color: var(--cor-prim);
+  max-width: 1300px;
+  font-size: 80px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 70px;
+}
+
+section .txt-topo-site h1 span {
+  color: var(--cor-sec);
+  font-size: 100px;
+}
+
+section .txt-topo-site p {
+  padding: 40px 0;
+  font-size: 20px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.img-topo-site {
+  display: flex;
+  width: 340px;
+  height: 500px;
+  border: 4px solid var(--cor-sec); /* Cor da borda */
+  border-radius: 80px;
+  object-fit: cover;
+  overflow: hidden;
+  position: relative;
+  animation: flutuar 3s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar {
+  0% {
+    top: 140px;
+  }
+
+  100% {
+    top: 360px;
+  }
+}
+
+/* ESTILO DAS ESPECIALIDADES */
+.especialidades {
+  padding: 130px 7%;
+}
+
+.especialidades .flex {
+  gap: 200px;
+}
+
+.especialidades .especialidades-box {
+  color: var(--cor-prim);
+  border-radius: 80px;
+  padding: 25px 80px;
+  margin-top: 50px;
+  transition: 0.4s;
+}
+
+.especialidades .especialidades-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px var(--cor-fundo);
+}
+
+.especialidades .especialidades-box i {
+  font-size: 140px;
+  color: var(--cor-sec);
+}
+
+.especialidades .especialidades-box h3 {
+  font-size: 45px;
+  margin: 40px 0;
+}
+
+.especialidades-box p {
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ESTILO SOBRE */
+.sobre {
+  padding: 80px 10%;
+}
+.img-sobre img {
+  width: 400px;
+  height: 600px;
+  border-radius: 50px;
+}
+
+.sobre .flex {
+  align-items: center;
+  gap: 90px;
+  padding: 90px 0;
+}
+
+.txt-sobre {
+  color: var(--cor-prim);
+}
+
+.txt-sobre h2 {
+  font-size: 50px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  line-height: 50px;
+  margin-bottom: 30px;
+}
+
+.txt-sobre h2 span {
+  color: var(--cor-sec);
+  display: block;
+}
+
+.txt-sobre p1 {
+  font-size: 25px;
+  text-align: justify;
+}
+
+.txt-sobre p1 span1 {
+  color: var(--cor-sec);
+}
+
+.txt-sobre p1 span2:hover {
+  color: var(--cor-op);
+}
+
+.txt-sobre p1 span3:hover {
+  color: var(--cor-op);
+}
+
+.txt-sobre p2 {
+  font-size: 25px;
+  text-align: justify;
+}
+
+.txt-sobre p2 span2:hover {
+  color: var(--cor-op);
+}
+
+.btn-social button {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--cor-sec);
+  font-size: 45px;
+  color: var(--cor-fundo-esc);
+  margin: 40px 15px;
+  transition: 0.2s;
+}
+
+.btn-social button:hover {
+  color: var(--cor-prim);
+  transform: scale(1.14);
+}
+
+/* ESTILO DO PORTIFOLIO */
+.portifolio {
+  padding: 150px 5%;
+  box-shadow: 0 0 60px 30px var(--cor-fundo);
+}
+
+.portifolio .flex {
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.img-port {
+  width: 500px;
+  height: 620px;
+  background-size: cover;
+  background-position: 100% 0%;
+  transition: 6s;
+  cursor: pointer;
+  border-radius: 80px;
+  position: relative;
+}
+
+.img-port:hover {
+  background-position: 100% 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000c9;
+  border-radius: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--cor-prim);
+  opacity: 0;
+  transition: 0.5s;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.overlay:hover {
+  opacity: 1;
+}
+
+/* ESTILO DO FORMULARIO DE CONTATO */
+
+.formulario {
+  padding: 120px 5%;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  background-color: var(--cor-fundo-esc);
+  border: 0;
+  outline: 0;
+  padding: 30px 25px;
+  border-radius: 30px;
+  color: var(--cor-prim);
+  font-size: 25px;
+}
+
+form textarea {
+  resize: none;
+  padding: 80px 25px;
+}
+
+form .btn-enviar {
+  margin-top: 25px;
+  text-align: center;
+}
+
+form .btn-enviar input {
+  width: 200px;
+  background-color: var(--cor-sec);
+  color: var(--cor-fundo-sec);
+  cursor: pointer;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+/* ESTILO DO RODAPE */
+
+.logo-footer img {
+  width: 280px;
+  height: 180px;
+  transition: 0.3s;
+}
+
+.logo-footer img:hover {
+  transform: scale(1.15);
+}
+
+footer {
+  padding: 1px;
+  box-shadow: 0 0 60px 30px var(--cor-fundo);
+}
+
+footer .flex {
+  justify-content: space-between;
+}
+
+.line-footer {
+  padding: 2px 50px;
+}
+
+.borda {
+  border-top: 5px solid var(--cor-sec);
+}
+
+.line-footer p {
+  display: inline-flex;
+  align-items: center;
+}
+
+.line-footer p i {
+  color: var(--cor-sec);
+  font-size: 8vh;
+  margin-left: 110px;
+  margin-right: 15px;
+  transition: 0.2s;
+}
+
+.line-footer p a {
+  color: var(--cor-prim);
+  list-style-type: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.line-footer i:hover {
+  transform: scale(1.08);
+}
+
+.line-footer span {
+  transition: 0.2s;
+}
+
+.line-footer span:hover {
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 700px) {
+  /* CLASSES GERAIS */
+  .flex {
+    flex-direction: column;
+  }
+
+  .topo-do-site .flex {
+    flex-direction: column-reverse;
+  }
+
+  h2 .titulo {
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  /* CABEÇALHO */
+  .menu-desktop,
+  .btn-contato {
+    display: none;
+  }
+
+  /* TOPO DO SITE */
+  .topo-do-site {
+    padding: 20px 8%;
+  }
+
+  .topo-do-site .flex {
+    gap: 10px;
+  }
+
+  .topo-do-site h1 {
+    font-size: 30px;
+  }
+
+  .topo-do-site .img-topo-site img {
+    width: 100%;
+  }
+
+  /* ESPECIALIDADES */
+  .especialidades {
+    padding: 40px 8%;
+  }
+
+  .especialidades .flex {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .especialidades .especialidades-box {
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .especialidades .especialidades-box i {
+    font-size: 80px;
+  }
+
+  .especialidades .especialidades-box h3 {
+    font-size: 24px;
+  }
+
+  /* SOBRE */
+  .sobre {
+    padding: 30px 5%;
+  }
+
+  .img-sobre img {
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+  }
+
+  .sobre .flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .txt-sobre h2 {
+    font-size: 32px;
+  }
+
+  .txt-sobre p1,
+  .txt-sobre p2 {
+    font-size: 16px;
+  }
+
+  /* PORTIFÓLIO */
+  .portifolio {
+    padding: 80px 5%;
+  }
+
+  .portifolio .flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .img-port {
+    width: 100%;
+    height: 400px; /* Aumentei o tamanho das imagens */
+    border-radius: 30px;
+    position: relative;
+  }
+
+  /* Overlay maior no Portfólio */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000c9;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--cor-prim);
+    opacity: 0;
+    transition: 0.5s;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+  }
+
+  .overlay:hover {
+    opacity: 1;
+  }
+
+  /* FORMULÁRIO */
+  .formulario {
+    padding: 40px 5%;
+  }
+
+  form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  form input,
+  form textarea {
+    width: 100%;
+    background-color: #242424;
+    border: 0;
+    outline: 0;
+    padding: 30px 25px;
+    border-radius: 30px;
+    color: var(--cor-prim);
+    font-size: 25px;
+  }
+
+  /* Remover texto de "E-mail" e deixar só o ícone no campo de e-mail */
+  form input[type="email"] {
+    padding-left: 50px; /* Deixa espaço para o ícone */
+  }
+
+  form input[type="email"]::placeholder {
+    color: transparent; /* Torna o placeholder invisível */
+  }
+
+  /* Ícone do E-mail no formulário */
+  .formulario input[type="email"]::before {
+    content: "\f0e0"; /* Código do ícone de e-mail no Font Awesome */
+    font-family: "FontAwesome";
+    position: absolute;
+    left: 15px;
+    top: 20px;
+    color: var(--cor-sec);
+    font-size: 20px;
+  }
+
+  form .btn-enviar {
+    margin-top: 25px;
+    text-align: center;
+  }
+
+  form .btn-enviar input {
+    width: 100%;
+    background-color: var(--cor-sec);
+    color: #242424;
+    cursor: pointer;
+    font-weight: 700;
+    transition: 0.3s;
+  }
+
+  /* RODAPÉ */
+  footer .flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .line-footer p {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+
+  .line-footer p i {
+    font-size: 6vh;
+    margin-right: 10px;
+  }
+}
